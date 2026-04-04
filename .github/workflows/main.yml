@@ -15,10 +15,10 @@ jobs:
 
     steps:
       - name: Checkout the code
-        uses: actions/checkout@v6.0.2 # this was taken by searching 'Checkout' in the marketplace located in this window right
+        uses: actions/checkout@v4 # this was taken by searching 'Checkout' in the marketplace located in this window right
 
       - name: Install Nodejs and npm # this was taken by searching 'Node' in the marketplace located in this window right
-        uses: actions/setup-node@v6.3.0
+        uses: actions/setup-node@v4
         with:
           node -version: '22'
 
@@ -35,7 +35,7 @@ jobs:
             -r cli,htmlextra
 
       - name: Newman Report
-        uses: actions/upload-artifact@v3.2.2
+        uses: actions/upload-artifact@v4
         with:
           name: Newman Report
           path: newman/*.html

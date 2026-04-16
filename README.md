@@ -62,7 +62,7 @@ You can run the project on your local system for that:
 5. Run the Newman Command:
 
 ```
- newman run InWarrantyFlowCollection.postman_collection.json \
+ newman run 'InWarrantyFlowCollection.postman_collection.json' \
             -e QA.postman_environment.json \
             -d testdata.csv \
             -r cli,htmlextra \
